@@ -22,7 +22,7 @@ final class WooBlocks {
 	}
 
     /**
-     * Plugin version_compare
+     * Plugin version
      * 
      * @return string
      * 
