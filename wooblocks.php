@@ -2,7 +2,7 @@
 /**
  * Plugin Name: WooBlocks - Woocommerce Builder
  * Plugin URI:  https://wooblocks.com/
- * Description: WooBlocks is the full WooCommerce template builder for Gutenburg.
+ * Description: WooBlocks is the powerfull WooCommerce template builder for Gutenburg.
  * Version: 1.0.0
  * Author: Md Sharif Miah
  * Author URI:  https://sharifinfo.com
@@ -13,8 +13,6 @@
  */
 
 defined('ABSPATH') || exit;
-
-require_once __DIR__ . '/autoload.php';
 
 final class WooBlocks {
 
@@ -82,7 +80,7 @@ final class WooBlocks {
 			return;
 		}
 
-		\WooBlocks\Plugin::init();
+		// \WooBlocks\Plugin::init();
 
         do_action('wooblocks/after_loaded');
 	}
