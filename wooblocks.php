@@ -21,6 +21,14 @@ final class WooBlocks {
 		add_action('plugins_loaded', [$this, 'init']);
 	}
 
+    /**
+     * Plugin version_compare
+     * 
+     * @return string
+     * 
+     * @since 1.0.0
+     */
+
 	public static function plugin_version() {
 		return '1.0.0';
 	}
@@ -29,6 +37,7 @@ final class WooBlocks {
 	 * Plugin url
 	 *
 	 * @return mixed
+     * 
 	 * @since 1.0.0
 	 */
 	public static function plugin_url() {
@@ -39,6 +48,7 @@ final class WooBlocks {
 	 * Plugin root file.
 	 *
 	 * @return string
+     * 
 	 * @since 1.0.0
 	 *
 	 */
@@ -50,17 +60,32 @@ final class WooBlocks {
 	 * Plugin dir
 	 *
 	 * @return mixed
+     * 
 	 * @since 1.0.0
 	 */
 	public static function plugin_dir() {
 		return trailingslashit(plugin_dir_path(__FILE__));
 	}
 
+    /**
+     * Load text domain
+     * 
+     * @return void
+     * 
+     * @since 1.0.0
+     */
 	public function i18n() {
 
 		load_plugin_textdomain('wooblokcs', false, self::plugin_dir() . 'languages/');
 	}
 
+    /**
+     * Plugin main class loading
+     * 
+     * @return void
+     * 
+     * @since 1.0.0
+     */
 	public function init() {
 
         do_action('wooblocks/before_loaded');
@@ -85,12 +110,26 @@ final class WooBlocks {
         do_action('wooblocks/after_loaded');
 	}
 
+    /**
+     * Minimum version not match notice
+     * 
+     * @return string
+     * 
+     * @since 1.0.0
+     */
 	public function version_mismatch() {
 
 		return 'woocommerce minimum version does not match';
 
 	}
 
+    /**
+     * Woocommerce missing notice
+     * 
+     * @return string
+     * 
+     * @since 1.0.0
+     */
 	public function missing_woocommerce() {
         return 'missing woocommerce';
     }
