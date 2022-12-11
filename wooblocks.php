@@ -16,19 +16,13 @@ defined('ABSPATH') || exit;
 
 final class WooBlocks {
 
-	public static function plugin_version() {
-		return '1.0.0';
+    public function __construct() {
+		add_action('init', [$this, 'i18n']);
+		add_action('plugins_loaded', [$this, 'init']);
 	}
 
-	/**
-	 * Plugin root file.
-	 *
-	 * @return string
-	 * @since 1.0.0
-	 *
-	 */
-	public static function plugin_file() {
-		return __FILE__;
+	public static function plugin_version() {
+		return '1.0.0';
 	}
 
 	/**
@@ -41,6 +35,17 @@ final class WooBlocks {
 		return trailingslashit(plugin_dir_url(__FILE__));
 	}
 
+    /**
+	 * Plugin root file.
+	 *
+	 * @return string
+	 * @since 1.0.0
+	 *
+	 */
+	public static function plugin_file() {
+		return __FILE__;
+	}
+
 	/**
 	 * Plugin dir
 	 *
@@ -49,11 +54,6 @@ final class WooBlocks {
 	 */
 	public static function plugin_dir() {
 		return trailingslashit(plugin_dir_path(__FILE__));
-	}
-
-	public function __construct() {
-		add_action('init', [$this, 'i18n']);
-		add_action('plugins_loaded', [$this, 'init']);
 	}
 
 	public function i18n() {
