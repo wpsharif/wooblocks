@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: WooBlocks - Woocommerce Builder
+ * Plugin Name: WooBlocks
  * Plugin URI:  https://wooblocks.com/
- * Description: WooBlocks is the powerfull WooCommerce template builder for Gutenburg.
+ * Description:  Gutenberg Blocks for Woocommerce.
  * Version: 1.0.0
  * Author: Md Sharif Miah
  * Author URI:  https://sharifinfo.com
@@ -14,57 +14,35 @@
 
 defined('ABSPATH') || exit;
 
+require_once __DIR__ . '/inc/wooblocks_init.php';
+
 final class WooBlocks {
 
     public function __construct() {
+
+		$this->define_constant();
+
 		add_action('init', [$this, 'i18n']);
 		add_action('plugins_loaded', [$this, 'init']);
-	}
 
-    /**
-     * Plugin version
-     * 
-     * @return string
-     * 
-     * @since 1.0.0
-     */
-
-	public static function plugin_version() {
-		return '1.0.0';
 	}
 
 	/**
-	 * Plugin url
-	 *
-	 * @return mixed
-     * 
+	 * Define all constant here
+	 * 
+	 * @return void 
+	 * 
 	 * @since 1.0.0
 	 */
-	public static function plugin_url() {
-		return trailingslashit(plugin_dir_url(__FILE__));
-	}
+	public function define_constant(){
 
-    /**
-	 * Plugin root file.
-	 *
-	 * @return string
-     * 
-	 * @since 1.0.0
-	 *
-	 */
-	public static function plugin_file() {
-		return __FILE__;
-	}
+		define('WOOBLOCKS_VERSION', '1.0.0');
+		define('WOOBLOCKS_NAME', 'essensial-blocks');
+		define('WOOBLOCKS_URL', plugin_dir_url(__FILE__));
+		define('WOOBLOCKS_ADMIN_URL', plugin_dir_url(__FILE__));
+		define('WOOBLOCKS_DIR_PATH', plugin_dir_path(__FILE__));
+		define('WOOBLOCKS_FILE', __FILE__);
 
-	/**
-	 * Plugin dir
-	 *
-	 * @return mixed
-     * 
-	 * @since 1.0.0
-	 */
-	public static function plugin_dir() {
-		return trailingslashit(plugin_dir_path(__FILE__));
 	}
 
     /**
@@ -76,7 +54,7 @@ final class WooBlocks {
      */
 	public function i18n() {
 
-		load_plugin_textdomain('wooblokcs', false, self::plugin_dir() . 'languages/');
+		load_plugin_textdomain('wooblokcs', false, WOOBLOCKS_URL . 'languages/');
 	}
 
     /**
@@ -104,9 +82,8 @@ final class WooBlocks {
 
 			return;
 		}
-
-		// \WooBlocks\Plugin::init();
-
+		
+		\WooBlocksInit::get_instance();
         do_action('wooblocks/after_loaded');
 	}
 
