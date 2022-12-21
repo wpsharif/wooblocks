@@ -23,7 +23,7 @@ class WooBlocksInit {
 
         $this->wooblocks_dependencies();
         
-        \WooBlocksEnqueue::init();
+        new WooBlocksEnqueue();
 
 	}
 
