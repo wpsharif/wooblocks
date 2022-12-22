@@ -12,7 +12,7 @@ class WooBlocksEnqueue {
     }
 
     public function wooblocks_enqueue_block_assets(){
-        wp_enqueue_script( 'WooBlocksScript', WOOBLOCKS_URL . "build/index.js", ["wp-blocks"]);
+        wp_enqueue_script( 'wooblocks-editor-script', WOOBLOCKS_URL . "build/index.js", ["wp-blocks"]);
     }
 
     public function wooblocks_fronend_backend_assets(){

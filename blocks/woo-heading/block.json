@@ -1,0 +1,13 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "title": "Woo Heading",
+    "name": "wooblocks/woo-heading",
+    "category": "wooblocks",
+    "description": "Create advanced heading with title, subtitle and separator controls",
+    "textdomain": "wooblocks",
+    "supports": {
+      "anchor": true
+    },
+    "editorScript": "wooblocks-editor-script"
+  }
+  

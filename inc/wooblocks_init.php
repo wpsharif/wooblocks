@@ -30,6 +30,7 @@ class WooBlocksInit {
     public function wooblocks_dependencies(){
 
         require_once WOOBLOCKS_DIR_PATH . "inc/wooblocks_enqueue.php";
+        require_once WOOBLOCKS_DIR_PATH . "blocks/woo-heading/woo_heading.php";
 
     }
 }
