@@ -2,6 +2,64 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/blocks/woo-header/woo_header.js":
+/*!*********************************************!*\
+  !*** ./src/blocks/woo-header/woo_header.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+
+const {
+  registerBlockType
+} = wp.blocks;
+registerBlockType('wooblocks/woo-header', {
+  title: 'Woo Header',
+  category: 'common',
+  icon: 'smiley',
+  description: 'Learning in progress',
+  keywords: ['example', 'test'],
+  edit: () => {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h1", null, "Hello Woo"));
+  },
+  save: () => {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h1", null, "Hello Woo"));
+  }
+});
+
+/***/ }),
+
+/***/ "./src/blocks/woo-product-list/woo_product_list.js":
+/*!*********************************************************!*\
+  !*** ./src/blocks/woo-product-list/woo_product_list.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+
+const {
+  registerBlockType
+} = wp.blocks;
+registerBlockType('wooblocks/woo-product-list', {
+  title: 'Woo Product List',
+  category: 'common',
+  icon: 'smiley',
+  description: 'Learning in progress',
+  keywords: ['example', 'test'],
+  edit: () => {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h1", null, "Hello Woo"));
+  },
+  save: () => {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h1", null, "Hello Woo"));
+  }
+});
+
+/***/ }),
+
 /***/ "@wordpress/element":
 /*!*********************************!*\
   !*** external ["wp","element"] ***!
@@ -87,26 +145,10 @@ var __webpack_exports__ = {};
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _blocks_woo_header_woo_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./blocks/woo-header/woo_header */ "./src/blocks/woo-header/woo_header.js");
+/* harmony import */ var _blocks_woo_product_list_woo_product_list__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./blocks/woo-product-list/woo_product_list */ "./src/blocks/woo-product-list/woo_product_list.js");
 
-const {
-  registerBlockType
-} = wp.blocks;
-registerBlockType('wooblocks/woo-product-list', {
-  title: 'Woo Product List',
-  category: 'common',
-  icon: 'smiley',
-  description: 'Learning in progress',
-  keywords: ['example', 'test'],
-  edit: () => {
-    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h1", null, "Hey this is your first block"));
-  },
-  save: () => {
-    const title = "this is title";
-    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h1", null, title));
-  }
-});
+
 })();
 
 /******/ })()
