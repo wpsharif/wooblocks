@@ -24,8 +24,14 @@ final class WooBlocks {
 
 		add_action('init', [$this, 'i18n']);
 		add_action('plugins_loaded', [$this, 'init']);
+		add_action( 'init', [$this, 'create_block_starter_block_block_init'] );
 
 	}
+
+	public function create_block_starter_block_block_init() {
+		register_block_type( WOOBLOCKS_DIR_PATH . '/build/blocks/woo-header' );
+		register_block_type( WOOBLOCKS_DIR_PATH . '/build/blocks/woo-product-list' );
+	}	
 
 	/**
 	 * Define all constant here
@@ -127,4 +133,3 @@ function deactivate_wooblocks() {
 
     //do something
 }
-

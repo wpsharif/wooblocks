@@ -23,14 +23,14 @@ class WooBlocksInit {
 
         $this->wooblocks_dependencies();
         
-        new WooBlocksEnqueue();
+        // new WooBlocksEnqueue();
 
 	}
 
     public function wooblocks_dependencies(){
 
-        require_once WOOBLOCKS_DIR_PATH . "inc/wooblocks_enqueue.php";
-        require_once WOOBLOCKS_DIR_PATH . "blocks/woo-heading/woo_heading.php";
+        // require_once WOOBLOCKS_DIR_PATH . "inc/wooblocks_enqueue.php";
+        // require_once WOOBLOCKS_DIR_PATH . "blocks/woo-heading/woo_heading.php";
 
     }
 }
